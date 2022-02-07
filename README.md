@@ -1,4 +1,4 @@
-# TP Guess The Number - Ynov Python B1
+# TP Virus  - Ynov Python B1
 
 :see_no_evil: _**Il s'agit d'un travail autonomne.**_ :speak_no_evil:
 
@@ -15,68 +15,18 @@ L'objectif de cet exercice est de créer un virus qui va se répliquer automatiq
 Un virus, pour rappel, est un programme qui embarque un code malveillant (payload) qui va infecter un systeme d'information et se multiplier sur cet OS. Il ne détruit pas le système d'exploitation mais va agir en background pour rester le plus longtemps indetecté. 
 
 
- Il faudra : 
-- Detecter le numéro de l'épisode
-- Renommer le fichier sans modifier l'extension en suivant le pattern suivant : 
-  - **Tokyo Ghoul [SEASON_NUMBERxEPISODE_NUMBER] - EPISODE_NAME.EXTENSION** 
-  - Pour cela vous devrez utiliser les fonctions de manipulation de chaîne de caractère
-  - Vous allez devoir boucler sur les fichiers du dossier `exerce1` pour récupérer les noms des fichiers.
-  - Pensez à trier les fichiers
-
-  <summary>Astuce</summary>
   
-  
-  ```python
-  import os
+Votre programme devra lorsqu'il est executé : 
+-  Lister les fichiers python présent dans le dossier (Nous travaillons uniquement dans un dossier pour éviter de contaminer toute la machine)
 
-  for filename in os.listdir("/path/to/dir/"):
-    if filename.endswith("XXX") or filename.endswith("XXX"): 
-        print(os.path.join(directory, filename))
+Pour chaque fichier Python il faudra : 
 
-    else:
-        print('not found)
-        
-   files =  os.listdir()
+- Lire le fichier python 
+- Insérer au début du fichier le payload (Morceau de script malveillant)
 
-  print(files)
+Le payload et la partie infection sera donc présent sur le nouveau fichier. Et lorsque celui-ci est executé il devra faire la même chose à son tour : 
 
-  Output
-
-  ['A sample.txt', 'src.py', 'D sample.txt', 'E sample.txt', 'C sample.txt', 'B sample.txt']
-
-
-  sorted_files =  sorted(files)
-
-  print(sorted_files)
-  ```
-
-
- - Vous pouvez créer une liste ou un dictionnaire (key:value) contenant les noms des épisodes. Par exemple {"1":"Tragedy","2":"Incubation"...} ou une liste : ["Tragedy", "Incubation",...,"High Spirits"]
- - Les noms des épisodes sont fournis ci-dessous.
-
-
-Tokyo Ghoul [1x5] - Scars.mp4  
-Tokyo Ghoul [1x9] - Birdcage.mp4  
-Tokyo Ghoul [1x7] - Captivity.mp4  
-Tokyo Ghoul [1x2] - Incubation.mp4  
-Tokyo Ghoul [1x8] - Circular.mp4    
-Tokyo Ghoul [1x11] - High Spirits.mp4  
-Tokyo Ghoul [1x10] - Aogiri.mp4  
-Tokyo Ghoul [1x4] - Supper.mp4  
-Tokyo Ghoul [1x3] - Dove.mp4  
-Tokyo Ghoul [1x6] - Cloudburst.mp4  
-Tokyo Ghoul [1x1] - Tragedy.mp4  
-
-
-## Exercice BONUS : 
-
-- Ne pas utiliser la liste des épisodes ci-dessus.
-- Utiliser le dossier :  `exercice_bonus`
-- Le programme doit detecter le nom de la série en comptant le nombre d'occurence des mots dans les des noms de fichier présents dans le dossier (Ou une autre façons si vous préférez)
-- Le programme doit detecter le numéro de la saison de l'épisode, si des saisons différentes sont dans le même dossier il faudra alors séparer les épisodes dans des dossiers différents comportant le numéro de la saison.
-- A l'aide du site : https://thetvdb.com/series/the-big-bang-theory/seasons/official/6 et de la librairie `request` (ou de la librairie `tvdb-api`) récupérer les noms des épisodes et renommer en concordance.
-- Le programme peut fonctionner uniquement pour les 2 séries présentes. Vous pouvez si vous le souhaitez déterminer les séries présentes dynamiquement. 
-
-
-
+- Scanner le dossier
+- Vérifier si le fichier n'est pas déjà infecté
+- Si il ne l'est pas il faudra l'infecté
 
