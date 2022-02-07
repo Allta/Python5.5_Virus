@@ -30,3 +30,4 @@ Le payload et la partie infection sera donc présent sur le nouveau fichier. Et 
 - Vérifier si le fichier n'est pas déjà infecté
 - Si il ne l'est pas il faudra l'infecté
 
+**Dans notre cas, le payload est juste le code Python qui permet de scanner et d'infecter les fichiers** 
