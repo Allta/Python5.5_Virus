@@ -8,10 +8,11 @@
 
 :raising_hand: Si vous avez des soucis n'hésitez pas à m'appeler. 
  
- ## Exercice 1: TV Show Renamer
+ ## Exercice 1: Python Virus
  
-Dans ce projet, dans le fichier `main.py` vous devez réaliser un programme pour renommer les épisodes d'une série téléchargée depuis des sources différentes.
-Dans cet exercice vous devrez utiliser les fichiers du dossier `exercice 1`
+L'objectif de cet exercice est de créer un virus qui va se répliquer automatiquement sur un système infecté. 
+
+Un virus, pour rappel, est un programme qui embarque un code malveillant (payload) qui va infecter un systeme d'information et se multiplier sur cet OS. Il ne détruit pas le système d'exploitation mais va agir en background pour rester le plus longtemps indetecté. 
 
 
  Il faudra : 
